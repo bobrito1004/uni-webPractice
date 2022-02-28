@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Web</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Страница, личная, визитка">
+    <meta name="description" content="Сайт визитка">
+    <link href="outlines.css" rel="stylesheet">
+</head>
+<body>
+<header class="header">
+    <div class="header__container">
+        <a href="./index.html" class="header__logo"></a>
+        <div class="header__menu">
+            <div class="menu__icon">
+                <span></span>
+            </div>
+            <nav class="menu__body">
+                <ul class="menu__list">
+                    <li>
+                        <a href="./index.html" data-nav="nav" class="menu__link">Главная</a>
+                    </li>
+                    <!--                    <li>-->
+                    <!--                        <a data-goto=".page__section_2" href="#" class="menu__link">Мои достижения</a>-->
+                    <!--                    </li>-->
+                    <!--                    <li>-->
+                    <!--                        <a data-goto=".page__section_3" href="#" class="menu__link">Друзья</a>-->
+                    <!--                    </li>-->
+                    <li>
+                        <a href="./ToDoList.html" data-nav="nav" class="menu__link">Список дел</a>
+                    </li>
+                    <li>
+                        <a href="./lab6.html" data-nav="nav" class="menu__link">lab6</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+</header>
+<main>
+    <section class="top-main">
+        <h1>НАЧАЛО</h1>
+        <p id="greet">Привет! Меня зовут Алексей и это мой сайт визитка!</p>
+        <p id="pers_info">Я учусь в ИТМО.<br>
+            Я делаю лабораторные.<br>
+            <strong>Я молодец.</strong><br>
+    </section>
+    <section class="bottom-main page__section_2">
+        <p>
+            <img src="kotik.jpg" alt="КОТИК!" width="600" height="338">
+        </p>
+        <div class="info_quote">
+            <div class="contact_info">
+                <ul class="contact">
+                    <li>
+                        <a href="tel:+79112285560">
+                            <b>+7-911-228-55-60</b>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:alexx-babintsev@yandex.ru">
+                            <em>alexx-babintsev@yandex.ru</em>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="j_quote">
+                <aside>
+                    <blockquote id="quote">
+                        <p>Дизайн в вебе - это просто.</p>
+                        <cite>Джейсон Стэйтхем</cite>
+                    </blockquote>
+                </aside>
+            </div>
+        </div>
+    </section>
+    <section class="table page__section_3">
+        <h2 class="table__title">Статы персонажев в Дотке</h2>
+        <div class="grid">
+            <div class="box">Персонаж</div>
+            <div class="box">Сила</div>
+            <div class="box">Ловкость</div>
+            <div class="box">Интелект</div>
+            <div class="box">Гуля</div>
+            <div class="box">25 + 2,4</div>
+            <div class="box">18 + 2,4</div>
+            <div class="box">15 + 1,8</div>
+            <div class="box">Анти-Крип</div>
+            <div class="box">23 + 1,6</div>
+            <div class="box">24 + 2,8</div>
+            <div class="box">12 + 1,8</div>
+            <div class="box">Тычка</div>
+            <div class="box">19 + 2,5</div>
+            <div class="box">14 + 1,3</div>
+            <div class="box">25 + 3,3</div>
+            <div class="box">Бучка</div>
+            <div class="box">25 + 3</div>
+            <div class="box">14 + 1,4</div>
+            <div class="box">16 + 1,5</div>
+            <div class="box">Петух</div>
+            <div class="box">21 + 2</div>
+            <div class="box">13 + 0,8</div>
+            <div class="box">25 + 4,1</div>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <div class="right-footer">
+        <p>Бабинцев Алексей, 2021 &#169;</p>
+    </div>
+</footer>
+<script src="main.js"></script>
+<script src="time.js"></script>
+</body>
+</html>
