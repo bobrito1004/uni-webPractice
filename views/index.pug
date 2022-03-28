@@ -1,0 +1,64 @@
+extends footer.pug
+
+block variables
+    - var authorised = true
+block scripts
+    script(src="../../public/main.js")
+    script(src="../../public/time.js")
+
+block content
+    main
+        section.top-main
+            h1 НАЧАЛО
+            p#greet Привет! Меня зовут Алексей и это мой сайт визитка!
+            p#pers_info
+                |Я учусь в имто
+                br
+                |Я делаю лабораторные
+                br
+                strong Я молодец.
+                br
+        section.bottom-main.page__section_2
+            p
+                img(src="../../public/kotik.jpg" alt="КОТИК!" width="600" height="338")
+            .info_quote
+                .contact_info
+                    ul.contact
+                        li
+                            a(href="tel:+79112285560")
+                                b +7-911-228-55-60
+                        li
+                            a(href="mailto:alexx-babintsev@yandex.ru")
+                                em alexx-babintsev@yandex.ru
+                .j_quote
+                    aside
+                        blockquote#quote
+                            p Дизайн в вебе - это просто.
+                            cite Джейсон стейтхем
+        section.table.page__section_3
+            h2.table__title Статы персонажей в Дотке
+                .grid
+                    .box Персонаж
+                    .box Сила
+                    .box Ловкость
+                    .box Интелект
+                    .box Гуля
+                    .box 25 + 2,4
+                    .box 18 + 2,4
+                    .box 15 + 1,8
+                    .box Анти-Крип
+                    .box 23 + 1,6
+                    .box 14 + 2,8
+                    .box 12 + 1,8
+                    .box Тычка
+                    .box 19 + 2,5
+                    .box 14 + 1,3
+                    .box 25 + 3,3
+                    .box Бучка
+                    .box 25 + 3
+                    .box 14 + 1,4
+                    .box 16 + 1,5
+                    .box Петух
+                    .box 21 + 2
+                    .box 13 + 0,8
+                    .box 25 + 4,1
