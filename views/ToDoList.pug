@@ -1,0 +1,19 @@
+extends main.pug
+
+block css
+    link(href='../../public/ToDoList.css' rel='stylesheet')
+
+block scripts
+    script(src="../../public/main.js")
+    script(src="../../public/ToDoList.js")
+
+block content
+    .find
+        h1 Список дел
+        form#task__form
+            input#task__input(type = "text" placeholder="Чего сегодня делаем?")
+            input#task__submit(type = "submit" value = "Добавить")
+    main
+        section.task__box
+            h2 Дела
+            #tasks
