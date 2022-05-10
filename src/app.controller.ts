@@ -12,4 +12,5 @@ export class AppController {
   index(): any{
     return {ServerResponseTime: this.appService.getServerResponseTime()};
   }
+
 }
