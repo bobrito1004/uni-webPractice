@@ -1,0 +1,18 @@
+extends main
+
+block scripts
+    script(src = 'https://cdn.socket.io/4.3.2/socket.io.min.js' integrity="sha384-KAZ4DtjNhLChOB/hxXuKqhMLYvx3b5MlT55xPEiNmREKRzeEm+RVPlTnAn0ajQNs" crossorigin="anonymous")
+    script(src="/js/chat.js")
+
+
+block content
+    main
+        section.chat__section
+            .container
+                .chat
+                    h2.chat__title Чат!
+                    .chat__body
+                        input#message(required type = 'text')
+                        button(onclick = "handleSubmitNewMessage()") Отправить
+                    .chat__box
+                        ul#messageBox

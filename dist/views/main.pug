@@ -1,0 +1,32 @@
+block variables
+doctype html
+html(lang='ru')
+    head
+        title Web
+        meta(charset = 'UTF-8')
+        meta(name = 'keywords' content = 'Страница, личная, визитка')
+        meta(name = 'description' content = 'Сайт визитка')
+        link(rel='stylesheet', href='/css/outlines.css')
+        block css
+    body
+        header.header
+            .header__container
+                a.header__logo(href="/")
+                .header__menu
+                    .menu__icon
+                        span
+                    nav.menu__body
+                        ul.menu__list
+                            li
+                                a.menu__link(href = "./" data-nav = "nav") Главная
+                            li
+                                a.menu__link(href = "ToDoList" data-nav = "nav") Список дел
+                            li
+                                a.menu__link(href = "lab6.html" data-nav = "nav") Фетч
+        block content
+        if authorised
+            p Вы авторизованы!
+        else
+            p Лучше авторизируйтесь!
+        block footer
+        block scripts

@@ -5,7 +5,7 @@ import { ToDoListService } from "./toDoList.service";
 export class ToDoListController {
   constructor(private readonly toDoListService:ToDoListService ) {
   }
-  @Get()
+  @Get('ToDoList')
   @Render('ToDoList')
   toDoList(){}
 }

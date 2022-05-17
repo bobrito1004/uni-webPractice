@@ -7,6 +7,8 @@
       "target": "es6",
       "module": "commonjs",
       "moduleResolution": "node",
+      "assets": ["*.pug", "*.css", "*.js"],
+      "watchAssets": true,
       "outDir": "./build",
       "emitDecoratorMetadata": true,
       "experimentalDecorators": true,

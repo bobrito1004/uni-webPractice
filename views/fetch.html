@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Web</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Страница, личная, визитка">
+    <meta name="description" content="Сайт визитка">
+    <link rel="stylesheet" href="/css/outlines.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container"><a class="header__logo" href="./"></a>
+        <div class="header__menu">
+          <div class="menu__icon"><span></span></div>
+          <nav class="menu__body">
+            <ul class="menu__list">
+              <li><a class="menu__link" href="./" data-nav="nav">Главная</a></li>
+              <li><a class="menu__link" href="ToDoList" data-nav="nav">Список дел</a></li>
+              <li><a class="menu__link" href="fetch" data-nav="nav">Фетч</a></li>
+              <li><a class="menu__link" href="chat" data-nav="nav">Чат</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="top-main">
+        <div class="container">
+          <p id="error"></p>
+          <div class="fetch__button">
+            <button class="button" id="btn" type="button">Показать пост</button>
+          </div><img src="/img/preloader.gif" alt="nope" id="gif">
+          <div class="fetch__body" id="CardDiv"></div>
+        </div>
+      </section>
+    </main>
+    <p>Лучше авторизируйтесь!</p>
+    <script src="/js/fetch.js"></script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>
