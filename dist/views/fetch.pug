@@ -1,0 +1,22 @@
+extends main.pug
+
+block scripts
+    script(src="/js/fetch.js")
+    script(src="/js/main.js")
+
+block template
+    template#temp
+        .post
+            h3.title
+            p.info
+
+block content
+    main
+        section.top-main
+            .container
+                p#error
+                .fetch__button
+                    button(id = 'btn' type = 'button' class = 'button') Показать пост
+                img(src='/img/preloader.gif' alt='nope' id='gif')
+                div(class = "fetch__body" id = "CardDiv")
+
