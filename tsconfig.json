@@ -9,7 +9,7 @@
       "moduleResolution": "node",
       "assets": ["*.pug", "*.css", "*.js"],
       "watchAssets": true,
-      "outDir": "./build",
+      "outDir": "./dist",
       "emitDecoratorMetadata": true,
       "experimentalDecorators": true,
       "sourceMap": true

@@ -13,24 +13,13 @@ const app_service_1 = require("./app.service");
 const toDoList_module_1 = require("./toDoList/toDoList.module");
 const post_module_1 = require("./Post/post.module");
 const user_module_1 = require("./User/user.module");
-const auth_module_1 = require("./auth/auth.module");
+const fetch_module_1 = require("./fetch/fetch.module");
 const chat_module_1 = require("./chat/chat.module");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
     (0, common_1.Module)({
-        imports: [toDoList_module_1.ToDoListModule, post_module_1.PostModule, user_module_1.UserModule, chat_module_1.ChatModule,
-            auth_module_1.AuthModule.forRoot({
-                connectionURI: "https://02a49211d55c11ecb6281b2b0cb888eb-eu-west-1.aws.supertokens.io:3572",
-                apiKey: "OwfeyIlFNDaFrl2r4kKoPhcWEWaFRt",
-                appInfo: {
-                    appName: "itmo282768",
-                    apiDomain: "https://localhost:766",
-                    websiteDomain: "https://localhost:766",
-                    apiBasePath: "/api",
-                    websiteBasePath: "/auth"
-                },
-            })],
+        imports: [toDoList_module_1.ToDoListModule, post_module_1.PostModule, user_module_1.UserModule, fetch_module_1.FetchModule, chat_module_1.ChatModule],
         controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService],
     })

@@ -2,7 +2,20 @@
   "collection": "@nestjs/schematics",
   "sourceRoot": "src",
   "compilerOptions": {
-    "assets": ["common/envs/*"],
-    "plugins": ["@nestjs/swagger"]
+    "assets": [
+      {
+        "include": "../views",
+        "outDir": "dist/views",
+        "watchAssets": true
+      },
+      {
+        "include": "../public",
+        "outDir": "dist/public",
+        "watchAssets": true
+      }
+    ],
+    "plugins": [
+      "@nestjs/swagger"
+    ]
   }
 }

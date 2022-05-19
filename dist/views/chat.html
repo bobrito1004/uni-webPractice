@@ -9,21 +9,38 @@
   </head>
   <body>
     <header class="header">
-      <div class="header__container"><a class="header__logo" href="/"></a>
+      <div class="header__container"><a class="header__logo" href="./"></a>
         <div class="header__menu">
           <div class="menu__icon"><span></span></div>
           <nav class="menu__body">
             <ul class="menu__list">
               <li><a class="menu__link" href="./" data-nav="nav">Главная</a></li>
               <li><a class="menu__link" href="ToDoList" data-nav="nav">Список дел</a></li>
-              <li><a class="menu__link" href="lab6.html" data-nav="nav">Фетч</a></li>
+              <li><a class="menu__link" href="fetch" data-nav="nav">Фетч</a></li>
+              <li><a class="menu__link" href="chat" data-nav="nav">Чат</a></li>
             </ul>
           </nav>
         </div>
       </div>
     </header>
-    <div class="chatBox"></div>
+    <main>
+      <section class="chat__section">
+        <div class="container">
+          <div class="chat">
+            <h2 class="chat__title">Чат!</h2>
+            <div class="chat__body">
+              <input id="message" required type="text">
+              <button onclick="handleSubmitNewMessage()">Отправить</button>
+            </div>
+            <div class="chat__box">
+              <ul id="messageBox"></ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
     <p>Лучше авторизируйтесь!</p>
-    <script src="../../public/chat.js"></script>
+    <script src="https://cdn.socket.io/4.3.2/socket.io.min.js" integrity="sha384-KAZ4DtjNhLChOB/hxXuKqhMLYvx3b5MlT55xPEiNmREKRzeEm+RVPlTnAn0ajQNs" crossorigin="anonymous"></script>
+    <script src="/js/chat.js"></script>
   </body>
 </html>

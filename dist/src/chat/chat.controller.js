@@ -14,7 +14,7 @@ const openapi = require("@nestjs/swagger");
 const swagger_1 = require("@nestjs/swagger");
 const common_1 = require("@nestjs/common");
 let ChatController = class ChatController {
-    showWS() {
+    showChat() {
         return;
     }
 };
@@ -29,7 +29,7 @@ __decorate([
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", void 0)
-], ChatController.prototype, "showWS", null);
+], ChatController.prototype, "showChat", null);
 ChatController = __decorate([
     (0, swagger_1.ApiTags)('chat'),
     (0, common_1.Controller)()

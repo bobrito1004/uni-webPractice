@@ -11,6 +11,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 const openapi = require("@nestjs/swagger");
 const common_1 = require("@nestjs/common");
@@ -23,17 +32,23 @@ let PostController = class PostController {
     constructor(postService) {
         this.postService = postService;
     }
-    async getPosts() {
-        return this.postService.getPosts();
+    getPosts() {
+        return __awaiter(this, void 0, void 0, function* () {
+            return this.postService.getPosts();
+        });
     }
     getPostById({ id }) {
         return this.postService.getPostById(Number(id));
     }
-    async post(post, userId) {
-        return this.postService.createPost(post, userId);
+    post(post, userId) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return this.postService.createPost(post, userId);
+        });
     }
-    async deletePost(postId) {
-        await this.postService.deletePost(postId);
+    deleteClub(postId) {
+        return __awaiter(this, void 0, void 0, function* () {
+            yield this.postService.deletePost(postId);
+        });
     }
 };
 __decorate([
@@ -91,7 +106,7 @@ __decorate([
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Number]),
     __metadata("design:returntype", Promise)
-], PostController.prototype, "deletePost", null);
+], PostController.prototype, "deleteClub", null);
 PostController = __decorate([
     (0, swagger_1.ApiBearerAuth)(),
     (0, swagger_1.ApiTags)('post'),

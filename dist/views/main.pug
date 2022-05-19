@@ -11,7 +11,7 @@ html(lang='ru')
     body
         header.header
             .header__container
-                a.header__logo(href="/")
+                a.header__logo(href="./")
                 .header__menu
                     .menu__icon
                         span
@@ -22,7 +22,9 @@ html(lang='ru')
                             li
                                 a.menu__link(href = "ToDoList" data-nav = "nav") Список дел
                             li
-                                a.menu__link(href = "lab6.html" data-nav = "nav") Фетч
+                                a.menu__link(href = "fetch" data-nav = "nav") Фетч
+                            li
+                                a.menu__link(href = "chat" data-nav = "nav") Чат
         block content
         if authorised
             p Вы авторизованы!
@@ -30,3 +32,4 @@ html(lang='ru')
             p Лучше авторизируйтесь!
         block footer
         block scripts
+    block template
