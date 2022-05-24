@@ -25,6 +25,8 @@ html(lang='ru')
                                 a.menu__link(href = "fetch" data-nav = "nav") Фетч
                             li
                                 a.menu__link(href = "chat" data-nav = "nav") Чат
+                            li
+                                a.menu__link(href = "register" data-nav = "nav") Вход
         block content
         if authorised
             p Вы авторизованы!
@@ -32,4 +34,5 @@ html(lang='ru')
             p Лучше авторизируйтесь!
         block footer
         block scripts
+        script(src = "/js/checkAuth.js")
     block template

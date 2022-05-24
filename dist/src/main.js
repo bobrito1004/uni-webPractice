@@ -16,6 +16,8 @@ require("reflect-metadata");
 const swagger_1 = require("@nestjs/swagger");
 const prisma_service_1 = require("../prisma/prisma.service");
 const common_1 = require("@nestjs/common");
+const supertokens_node_1 = require("supertokens-node");
+const auth_filter_1 = require("./auth/auth.filter");
 function bootstrap() {
     return __awaiter(this, void 0, void 0, function* () {
         const app = yield core_1.NestFactory.create(app_module_1.AppModule);
@@ -33,6 +35,12 @@ function bootstrap() {
         const swaggerDocs = swagger_1.SwaggerModule.createDocument(app, swaggerConfig);
         swagger_1.SwaggerModule.setup('api', app, swaggerDocs);
         app.useGlobalPipes(new common_1.ValidationPipe());
+        app.enableCors({
+            origin: ['https://localhost:12345'],
+            allowedHeaders: ['content-type', ...supertokens_node_1.default.getAllCORSHeaders()],
+            credentials: true,
+        });
+        app.useGlobalFilters(new auth_filter_1.SupertokensExceptionFilter());
         yield app.listen(PORT);
     });
 }
