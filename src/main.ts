@@ -6,6 +6,8 @@ import "reflect-metadata";
 import {SwaggerModule, DocumentBuilder} from "@nestjs/swagger";
 import {PrismaService} from "../prisma/prisma.service";
 import { ValidationPipe } from "@nestjs/common";
+import supertokens from 'supertokens-node';
+import { SupertokensExceptionFilter } from './auth/auth.filter';
 
 async function bootstrap() {
 
@@ -24,6 +26,12 @@ async function bootstrap() {
   const swaggerDocs = SwaggerModule.createDocument(app, swaggerConfig);
   SwaggerModule.setup('api', app, swaggerDocs);
   app.useGlobalPipes(new ValidationPipe());
+  app.enableCors({
+    origin: ['https://localhost:12345'],
+    allowedHeaders: ['content-type', ...supertokens.getAllCORSHeaders()],
+    credentials: true,
+  });
+  app.useGlobalFilters(new SupertokensExceptionFilter());
   await app.listen(PORT);
 };
 

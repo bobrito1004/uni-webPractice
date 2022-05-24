@@ -1,0 +1,22 @@
+doctype html
+html(lang='ru')
+    head
+        title Web
+        meta(charset = 'UTF-8')
+        meta(name = 'keywords' content = 'Страница, личная, визитка')
+        meta(name = 'description' content = 'Сайт визитка')
+        link(rel='stylesheet', href='/css/outlines.css')
+        block css
+    body
+        .form
+            form(onsubmit = "return false;")
+                h1.form_title Регистрация
+                .form_item
+                    label(for = "formEmail" class = "form_label") E-mail:
+                    input(id = "formEmail" type = "text" name = "email" class = "form_input _email")
+                .form_item
+                    label(for = "formMess" class = "form_label") Пароль:
+                    textarea(id = "formMess" name = "message" class = "form_input")
+                button(type = "submit" class = "form_button" onclick = "save()") Отправить
+                a(type = "submit" class = "form_button" href = "login") Вход
+        script(src = "/js/auth.js")
