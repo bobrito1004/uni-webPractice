@@ -87,7 +87,7 @@ __decorate([
     (0, common_1.Post)('create'),
     openapi.ApiResponse({ status: 201, type: Object }),
     __param(0, (0, common_1.Body)()),
-    __param(1, (0, common_1.Query)('authorID', common_1.ParseIntPipe)),
+    __param(1, (0, common_1.Query)('PostNumber', common_1.ParseIntPipe)),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [createPost_dto_1.CreatePostDto, Number]),
     __metadata("design:returntype", Promise)

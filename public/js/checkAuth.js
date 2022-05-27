@@ -3,7 +3,7 @@ async function doesSessionExist() {
   if (await supertokens.doesSessionExist()) {
     // Nothing
   } else {
-    location.replace('http://localhost:12345/login');
+    location.replace('/register');
   }
 }
 

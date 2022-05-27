@@ -53,7 +53,7 @@ export default class PostController {
   )
   @Post('create')
   async post(@Body() post: CreatePostDto,
-             @Query('authorID', ParseIntPipe) userId: number){
+             @Query('PostNumber', ParseIntPipe) userId: number){
     return this.postService.createPost(post, userId);
   }
   @ApiOperation({
