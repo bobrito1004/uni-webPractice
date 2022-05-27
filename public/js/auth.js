@@ -27,7 +27,7 @@ async function save() {
     .then((resp) => {
       console.log(resp);
       if (resp.status === 'OK') {
-        location.replace('http://localhost:12345');
+        location.replace('/');
       } else {
         console.log('Error');
       }
@@ -63,7 +63,7 @@ async function login() {
     .then((resp) => {
       console.log(resp);
       if (resp.status === 'OK') {
-        location.replace('http://localhost:12345');
+        location.replace('/');
       } else {
         console.log('Error');
       }
