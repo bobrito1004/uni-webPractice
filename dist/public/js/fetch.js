@@ -41,7 +41,7 @@ function getPost_blog(){
     var err_blog = document.getElementById("error_blog");
     gif_blog.style.visibility = "visible";
     err_blog.textContent = "";
-    fetch('http://localhost:12345/post/' + ID_blog)
+    fetch('/post/' + ID_blog)
       .then((response) => {
           if (response.ok) {
               console.log(response)

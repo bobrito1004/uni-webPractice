@@ -10,7 +10,7 @@ async function save() {
   const bodyJson = JSON.stringify(body);
   console.log(bodyJson);
 
-  await fetch('http://localhost:12345/auth/signup', {
+  await fetch('/auth/signup', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -27,7 +27,7 @@ async function save() {
     .then((resp) => {
       console.log(resp);
       if (resp.status === 'OK') {
-        location.replace('http://localhost');
+        location.replace('http://localhost:12345');
       } else {
         console.log('Error');
       }
@@ -46,7 +46,7 @@ async function login() {
   const bodyJson = JSON.stringify(body);
   console.log(bodyJson);
 
- await fetch('http://localhost:12345/auth/signin', {
+ await fetch('/auth/signin', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -71,7 +71,7 @@ async function login() {
 }
 
 async function ex() {
-  await fetch('http://localhost:12345/auth/signout', {
+  await fetch('/auth/signout', {
     method: 'POST',
   }).then((res) => console.log(res));
 }
