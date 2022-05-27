@@ -328,7 +328,8 @@ body.page__section_1 {
     font-weight: bold;
 }
 
-#gif {
+#gif,
+#gif_blog{
     visibility: hidden;
 }
 

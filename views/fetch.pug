@@ -14,9 +14,18 @@ block content
     main
         section.top-main
             .container
+                p Фетч с другого сайта
                 p#error
                 .fetch__button
                     button(id = 'btn' type = 'button' class = 'button') Показать пост
                 img(src='/img/preloader.gif' alt='nope' id='gif')
                 div(class = "fetch__body" id = "CardDiv")
+        section.bottom-main
+            .container
+                p Фетч с моей бд
+                p#error_blog
+                .fetch__button
+                    button(id = 'btn_blog' type = 'button' class = 'button') Показать пост
+                img(src='/img/preloader.gif' alt='nope' id='gif_blog')
+                div(class = "fetch__body" id = "CardDiv_blog")
 
